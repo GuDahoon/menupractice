@@ -27,6 +27,25 @@
             android:layout_marginHorizontal="10dp"
             android:textSize="25sp"/>
     </LinearLayout>
+    <TextView
+        android:id="@+id/textVi1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/binggraesamanco"
+        android:textAlignment="center"
+        android:text="먹고자 하면 먹을 것이오," />
+    <TextView
+        android:id="@+id/textVi3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/binggraesamanco"
+        android:textAlignment="center"
+        android:text="못 먹고자 하면 못 먹을 것이다" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,6 +142,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="조회"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gogo"
+                    android:text="보내기"/>
             </LinearLayout>
             <ImageView
                 android:id="@+id/weatherImg"

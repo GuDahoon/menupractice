@@ -1277,6 +1277,426 @@ public class CcActivity extends AppCompatActivity {
                 }
             });
         }
+        else if(kind.equals("맑음")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/margem.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/margem.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
+        else if(kind.equals("구름많음")||kind.equals("구름조금")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/cloud.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/cloud.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
+        else if(kind.equals("뇌우/폭우")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/noiu.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/noiu.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
+        else if(kind.equals("흐림")|kind.equals("안개")|kind.equals("황사")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/herim.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/herim.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
+        else if(kind.equals("비")|kind.equals("소낙비")|kind.equals("눈비")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/rain.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/rain.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
+        else if(kind.equals("눈")|kind.equals("소낙눈")) {
+            GetData task = new GetData();
+            task.execute("http://203.234.62.82:8088/snow.php");
+            btn1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    task.execute("http://203.234.62.82:8088/snow.php");
+                }
+            });
+            btn2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    finish();
+                }
+            });
+            btn4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu = mArrayList.get(0).get("keyword1");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu;
+                    String phpName="";
+                    switch (key1) {
+                        case "고기" : phpName = "meat";break;
+                        case "닭" : phpName = "chicken";break;
+                        case "떡" : phpName = "cake";break;
+                        case "면" : phpName = "noodle";break;
+                        case "밥" : phpName = "rice";break;
+                        case "빵" : phpName = "bread";break;
+                        case "야채" : phpName = "ya";break;
+                        case "해산물" : phpName = "seafood";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu);
+
+                }
+            });
+            btn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String tu1 = mArrayList.get(0).get("keyword2");
+                    mArrayList.clear();
+                    GetData task = new GetData();
+                    String key1 = tu1;
+                    String phpName="";
+                    switch (key1) {
+                        case "구이" : phpName = "gu";break;
+                        case "날것" : phpName = "nal";break;
+                        case "덮밥" : phpName = "du";break;
+                        case "복합" : phpName = "bok";break;
+                        case "볶음" : phpName = "bbo";break;
+                        case "부침" : phpName = "bu";break;
+                        case "분식" : phpName = "bunsik";break;
+                        case "비빔" : phpName = "bibim";break;
+                        case "오븐" : phpName = "oven";break;
+                        case "장" : phpName = "ja";break;
+                        case "찜" : phpName = "jji";break;
+                        case "탕" : phpName = "ta";break;
+                        case "튀김" : phpName = "tui";break;
+                        case "패스트푸드" : phpName = "fast";break;
+                        case "한상" : phpName = "han";break;
+                    }
+                    task.execute("http://203.234.62.82:8088/"+phpName+".php");
+                    Log.d(TAG, "response  - " + tu1);
+
+                }
+            });
+        }
         else if(kind.equals("random")){
             GetData task = new GetData();
             task.execute("http://203.234.62.82:8088/all.php");

@@ -87,7 +87,7 @@ public class userfragment extends Fragment {
     Button btnC, btnK1, btnK2, btnF, btnM, btnW, btnSend;
     EditText editN;
 
-    Button bigCity, choongchung, gyungi, jeonla, kangwon, gyungsang;
+    Button bigCity, choongchung, gyungi, jeonla, kangwon, gyungsang, btnGo;
     Button cityWeatherFind;
     TextView cityWeather, weatherKind;
     String url, city, weather, msg;
@@ -123,6 +123,7 @@ public class userfragment extends Fragment {
         jeonla = (Button) rootView.findViewById(R.id.jeonla);
         kangwon = (Button) rootView.findViewById(R.id.kangwon);
         gyungsang = (Button) rootView.findViewById(R.id.gyungsang);
+        btnGo = (Button) rootView.findViewById(R.id.gogo);
 
         cityWeather = (TextView) rootView.findViewById(R.id.cityWeather);
 
@@ -291,6 +292,14 @@ public class userfragment extends Fragment {
                 }.start();
             }
         });
+        btnGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CcActivity.class);
+                intent.putExtra("Kind", weatherKind.getText());
+                startActivity(intent);
+            }
+        });
 
         btnC.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -309,6 +318,7 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[1] = selectedItem[0];
+                        btnC.setText(selectedItem[0]);
                     }
                 });
                 dlg.show();
@@ -332,6 +342,7 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[2] = selectedItem[0];
+                        btnK1.setText(selectedItem[0]);
                     }
                 });
                 dlg.show();
@@ -356,6 +367,7 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[3] = selectedItem[0];
+                        btnK2.setText(selectedItem[0]);
                     }
                 });
                 dlg.show();
@@ -379,6 +391,7 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[4] = selectedItem[0];
+                        btnF.setText(selectedItem[0]);
                     }
                 });
                 dlg.show();
@@ -402,6 +415,7 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[5] = selectedItem[0];
+                        btnM.setText(selectedItem[0]);
                     }
                 });
                 dlg.show();
@@ -415,7 +429,7 @@ public class userfragment extends Fragment {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
                 dlg.setTitle("하나만 골라주세요!!!");
                 dlg.setIcon(R.drawable.applogo);
-                String[] words = new String[] {"맑음", "구름 많음", "뇌우", "흐림", "비","눈"};
+                String[] words = new String[] {"맑음", "구름많음", "뇌우", "흐림", "비","눈"};
                 dlg.setSingleChoiceItems(words, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -425,6 +439,8 @@ public class userfragment extends Fragment {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         sendDB[6] = selectedItem[0];
+                        btnW.setText(selectedItem[0]);
+
                     }
                 });
                 dlg.show();
