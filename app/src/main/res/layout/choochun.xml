@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:fontFamily="serif"
+            android:gravity="center_horizontal"
+            android:text="\n추천하는 음식은??!?!?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/findK1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/rrRed"
+                android:text="찾아줭~~" />
+
+            <Button
+                android:id="@+id/findK2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/rrRed"
+                android:text="찾아내~~" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_main_list"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_weight="6">
+
+    </ListView>
+
+
+    <LinearLayout
+        android:id="@+id/add_top_list"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/rrRed"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/rrRed"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/rrRed"
+            android:text="Find Restaurant" />
+
+    </LinearLayout>
+
+</LinearLayout>

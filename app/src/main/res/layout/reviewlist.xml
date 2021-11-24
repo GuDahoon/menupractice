@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF0F5"
+    tools:context=".reviewlist">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="#FFF0F5"
+        android:id="@+id/listView_main_list" >
+
+    </ListView>
+
+
+    <LinearLayout
+        android:id="@+id/add_top_list"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="#FFF0F5"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/pink"
+            android:background="@drawable/button_round"
+            android:text="뒤로" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/pink"
+            android:background="@drawable/button_round"
+            android:text="새로고침" />
+    </LinearLayout>
+
+</LinearLayout>

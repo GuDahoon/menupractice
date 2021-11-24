@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:background="#FDEEF4"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <RadioButton
+            android:id="@+id/Korean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:buttonTint="#954535"
+            android:textSize="20dp"
+            android:textColor="#954535"
+            android:text="한식" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#954535"
+            android:buttonTint="#954535"
+            android:text="일식"
+            android:id="@+id/Japan"
+            android:textSize="20dp"
+            android:layout_margin="5dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#954535"
+            android:buttonTint="#954535"
+            android:textSize="20dp"
+            android:text="중식"
+            android:id="@+id/China"
+            android:layout_margin="5dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#954535"
+            android:buttonTint="#954535"
+            android:textSize="20dp"
+            android:text="양식"
+            android:id="@+id/Foreigner"
+            android:layout_margin="5dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#954535"
+            android:buttonTint="#954535"
+            android:textSize="20dp"
+            android:text="아시안"
+            android:id="@+id/Asian"
+            android:layout_margin="5dp"/>
+    </RadioGroup>
+
+</LinearLayout>

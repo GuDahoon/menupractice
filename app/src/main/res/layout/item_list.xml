@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2"
+        tools:ignore="MissingConstraints"
+
+        android:layout_margin="1dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/textView_list_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_layout"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_span="2"
+                android:layout_margin="5dp"
+                android:text="" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/textView_list_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:text=""
+                android:background="@drawable/border_layout"/>
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/textView_list_id3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="35dp"
+                android:fontFamily="serif"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:text=""
+                android:background="@drawable/border_layout"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+</LinearLayout>
